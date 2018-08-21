@@ -7,13 +7,13 @@ class Factory
     public function createClass($className , $data)
     {
         switch($className){
-            case "DoorWithElectronicLock": 
+            case 'DoorWithElectronicLock': 
                 return new DoorWithElectronicLock($data);
                 break;
-            case "DoorWithMechanicalLock": 
+            case 'DoorWithMechanicalLock': 
                 return new DoorWithMechanicalLock($data);
                 break;
-            case "DoorWithLatch": 
+            case 'DoorWithLatch': 
                 return new DoorWithLatch($data);
                 break;
             default: throw new Exception("Error type");

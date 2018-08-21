@@ -6,19 +6,19 @@ spl_autoload_register(function ($class_name) {
 
 if(isset($_POST['passBtn'])){
     $factory = new Factory();
-    $door = $factory->createClass(DoorWithElectronicLock, $_POST['pass']);
+    $door = $factory->createClass('DoorWithElectronicLock', $_POST['pass']);
     $result = $door->initStatus();
 }
 
 if(isset($_POST['checkBtn'])){
     $factory = new Factory();
-    $door2 = $factory->createClass(DoorWithLatch, $_POST['check']);
+    $door2 = $factory->createClass('DoorWithLatch', $_POST['check']);
     $result = $door2->initStatus();
 }
 
 if(isset($_POST['statusBtn'])){
     $factory = new Factory();
-    $door3 = $factory->createClass(DoorWithMechanicalLock, $_POST['status']);
+    $door3 = $factory->createClass('DoorWithMechanicalLock', $_POST['status']);
     $result = $door3->initStatus();
 }
 ?>
